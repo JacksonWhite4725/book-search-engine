@@ -5,7 +5,6 @@ import Auth from '../utils/auth';
 import { removeBookId } from '../utils/localStorage';
 import { REMOVE_BOOK } from '../utils/mutations';
 import { GET_USER } from '../utils/queries';
-import { deleteBook } from '../utils/API';
 
 const SavedBooks = () => {
   const { loading, data } = useQuery(GET_USER);
