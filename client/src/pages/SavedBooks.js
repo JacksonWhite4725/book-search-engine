@@ -11,10 +11,9 @@ const SavedBooks = () => {
   const { loading, data } = useQuery(GET_USER);
   const userData = data?.getSingleUser || [];
   const [removeBook] = useMutation(REMOVE_BOOK);
-
+  console.log(Auth.getToken());
   const handleDeleteBook = async (bookId) => {
     const token = Auth.loggedIn() ? Auth.getToken() : null;
-
     if (!token) {
       return false;
     }
